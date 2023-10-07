@@ -1,5 +1,8 @@
 @media screen and (max-width: 1200px) {
-
+    .hamburger-menu {
+        width: 10px;
+        height: 10px;
+    }
 }
 
 @media screen and (max-width: 998px) {
