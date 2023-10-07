@@ -7,9 +7,6 @@ body {
     background-attachment: fixed;
 }
 
-.container-background {
-    background-color: rgb(0,0,0, 0.66);
-}
 
 /* main container */
 .container-header {
@@ -17,12 +14,14 @@ body {
     align-items: center;
     height: 152px;
     padding-left: 142px;
+    background-color: rgb(0,0,0, 0.66);
 }
 
 /* logo */
 .container-logo {
     height: 100%;
     width: 408px;
+    margin-right: 245px;
 
     display: flex;
     flex-direction: column;
@@ -35,83 +34,62 @@ body {
     cursor: pointer;
 }
 
-.logo {
-    letter-spacing: 18px;
-    padding-left: 18px;
-
-    color: white;
-    font-size: 40px;
-    font-family: sans-serif;
-
-    user-select: none;
-    cursor: pointer;
-}
-
-.lower-logo {
-    padding-right: 18px;
-
-    color: #8e8f8e;
-    font-size: 11px;
-    letter-spacing: 1px;
-
-    user-select: none;
-}
-
 /* upper header container */
 .container-navigation {
-    display: flex;
-    flex-direction: column;
-    flex-shrink: 0;
-
-    padding-left: 245px;
-    margin-bottom: 30px;
-    margin-right: 47px;
+    height: 100%;
 }
 
-.container-city {
+.upper-header {
     display: flex;
-    justify-content: flex-end;
-
     width: 100%;
-    margin-bottom: 20px;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 18px;
 }
 
 .mark-city-container {
     display: flex;
+    justify-content: center;
+    align-items: center;
     padding-right: 5px;
-
     cursor: pointer;
 }
 
 .city {
-    align-self: center;
+    margin-right: 40px;
 
-    border-bottom: 1px #c8b17a solid;
-    padding-bottom: 3px;
+    align-self: center;
     color: #c8b17a;
     font-size: 16px;
     font-family: sans-serif;
     font-weight: bold;
+
+    border-bottom: 1px #c8b17a solid;
+    padding-bottom: 3px;
 
     cursor: pointer;
 }
 
 /* change city */
 .change-city-container {
-    display: none;
+    display: grid;
+    overflow: hidden;
     position: absolute;
     right: 325px;
     top: 60px;
 
     width: 240px;
-    height: 180px;
+    height: 0;
     background-color: white;
 }
 
-.change-city {
+.active {
+    height: 180px;
+}
+
+.your-city {
     padding-top: 25px;
-    padding-left: 25px;
-    margin-bottom: 10px;
+    padding-left: 20px;
 
     color: black;
     font-weight: bolder;
@@ -122,12 +100,12 @@ body {
 /* moscow */
 .svg-icon-moscow {
     display: flex;
-    padding-left: 25px;
+    padding-left: 20px;
+    height: fit-content;
 }
 
 .moscow {
     align-self: center;
-    padding-top: 5px;
     margin-left: 10px;
 
     border-bottom: 1px solid black;
@@ -139,13 +117,12 @@ body {
 /* saint-petersburg */
 .svg-icon-saint-petersburg {
     display: flex;
-    padding-left: 25px;
-    padding-top: 10px;
+    padding-left: 20px;
+    height: fit-content;
 }
 
 .saint-petersburg {
     align-self: center;
-    padding-top: 5px;
     margin-left: 10px;
 
     border-bottom: 1px solid black;
@@ -153,13 +130,13 @@ body {
     font-size: 16px;
 }
 
+/* upper number phone */
 .upper-number-phone {
-    align-self: center;
-    padding-left: 45px;
+    margin-right: 40px;
 
     color: white;
     font-family: sans-serif;
-    font-size: 18px;
+    font-size: 19px;
 
     transition: 0.3s ease;
 
@@ -173,28 +150,33 @@ body {
 
 /* navigation */
 .down-container-navigation {
-    display: flex;
-    align-items: center;
-    gap: 45px;
+    /*white-space: nowrap;*/
+    padding-top: 12px;
 }
 
 .nav-text {
+    margin-right: 40px;
+
     text-decoration: none;
     color: white;
     font-size: 18px;
     font-family: sans-serif;
 
     transition: 0.3s ease;
+
+    cursor: pointer;
 }
 
 .nav-text:hover {
-    transition: 0.3s ease;
     color: #c8b17a;
+    transition: 0.3s ease;
 }
 
 .number-phone {
+    margin-right: 40px;
+
     color: white;
-    font-size: 26px;
+    font-size: 28px;
     font-family: sans-serif;
 
     transition: 0.3s ease;
@@ -219,6 +201,6 @@ body {
     align-items: center;
 
     border-left: 1px gray solid;
-    padding-left: 55px;
     height: 152px;
+    width: 160px;
 }

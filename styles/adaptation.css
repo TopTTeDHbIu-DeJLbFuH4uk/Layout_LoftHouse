@@ -1,3 +1,9 @@
+@media  screen and (max-width: 1900px) {
+    .down-container-navigation {
+        white-space: normal;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .hamburger-menu {
         width: 10px;
