@@ -1,6 +1,6 @@
-const containerLogoEl = document.querySelector('.container-logo');
+const containerHeaderLogoEl = document.querySelector('.container-header-logo');
 
-containerLogoEl.addEventListener('click', () => {
+containerHeaderLogoEl.addEventListener('click', () => {
     window.location.href = 'index.html';
 });
 

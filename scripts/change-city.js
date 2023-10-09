@@ -1,24 +1,25 @@
 const containerHeaderUpperEl = document.querySelector('.container-header-upper');
 const headerCityEl = document.querySelector('.header-city');
-const containerHeaderChangeCityEl = document.querySelector('.container-header-change-city');
+const containerHeaderPopupChangeCityEl = document.querySelector('.container-header-popup-change-city');
 
-function expandWindow() {
-    containerHeaderChangeCityEl.classList.add('active');
+const expandWindow = () => {
+    containerHeaderPopupChangeCityEl.classList.add('active');
 }
 if (containerHeaderUpperEl.addEventListener('click', expandWindow) || headerCityEl.addEventListener('click', expandWindow));
 
 
-function collapseWindow() {
-    containerHeaderChangeCityEl.classList.remove('active');
-}
-if (containerHeaderChangeCityEl.classList.contains('active')) {
-    document.addEventListener('click', (event) => {
-        const click = event.composedPath().includes(containerHeaderChangeCityEl);
-        if (!click) {
-            collapseWindow();
-        }
-    });
-}
+
+
+// const collapseWindow = () => {
+//     containerHeaderPopupChangeCityEl.classList.remove('active');
+// }
+document.addEventListener('click', (event) => {
+    const click = event.composedPath().includes(containerHeaderPopupChangeCityEl);
+    console.log(click);
+    if (!click) {
+        collapseWindow();
+    }
+});
 
 
 
