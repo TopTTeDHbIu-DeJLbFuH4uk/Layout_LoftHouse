@@ -7,19 +7,16 @@ const expandWindow = () => {
 }
 if (containerHeaderUpperEl.addEventListener('click', expandWindow) || headerCityEl.addEventListener('click', expandWindow));
 
-
-
-
 // const collapseWindow = () => {
 //     containerHeaderPopupChangeCityEl.classList.remove('active');
 // }
-document.addEventListener('click', (event) => {
-    const click = event.composedPath().includes(containerHeaderPopupChangeCityEl);
-    console.log(click);
-    if (!click) {
-        collapseWindow();
-    }
-});
+// document.addEventListener('click', (event) => {
+//     const click = event.composedPath().includes(containerHeaderPopupChangeCityEl);
+//     console.log(click);
+//     if (!click) {
+//         collapseWindow();
+//     }
+// });
 
 
 

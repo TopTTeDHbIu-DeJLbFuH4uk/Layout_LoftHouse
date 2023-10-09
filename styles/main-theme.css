@@ -8,7 +8,7 @@ body {
 }
 
 
-/* main container */
+/* MAIN CONTAINER */
 .container-header {
     display: flex;
     justify-content: space-between;
@@ -17,7 +17,7 @@ body {
     background-color: rgb(0,0,0, 0.66);
 }
 
-/* logo */
+/* LOGO */
 .container-header-logo {
     height: 100%;
     width: 408px;
@@ -34,7 +34,7 @@ body {
     cursor: pointer;
 }
 
-/* upper header navigation */
+/* UPPER HEADER NAVIGATION */
 .container-header-right {
     display: flex;
 }
@@ -92,7 +92,7 @@ body {
     color: #c8b17a;
 }
 
-/* modal window */
+/* MODAL WINDOW */
 .container-header-popup-change-city {
     display: grid;
     position: absolute;
@@ -112,9 +112,16 @@ body {
     transition: height 300ms ease;
 }
 
+.wrapper-header-popup {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
 .popup-header-city {
-    padding-top: 25px;
-    padding-left: 20px;
+    display: flex;
+    margin-bottom: 10px;
+    width: fit-content;
 
     color: black;
     font-weight: bolder;
@@ -122,12 +129,12 @@ body {
     font-family: sans-serif;
 }
 
-/* moscow */
-.container-header-popup-svg-icon-moscow {
+/* MOSCOW */
+.container-header-popup-moscow-city {
     display: flex;
-    align-items: center;
-    height: fit-content;
-    padding-left: 20px;
+    width: fit-content;
+    cursor: pointer;
+    margin-bottom: 10px;
 }
 
 .popup-icon-moscow {
@@ -135,19 +142,26 @@ body {
 }
 
 .popup-header-moscow {
-    border-bottom: 1px solid black;
+    align-self: center;
 
     font-family: sans-serif;
     font-size: 16px;
+    border-bottom: 1px solid #000;
+
+    transition: border-bottom-color 0.3s, color 0.3s;
 }
 
-/* saint-petersburg */
-.container-header-popup-svg-icon-saint-petersburg {
+.container-header-popup-moscow-city:hover .popup-header-moscow {
+    border-bottom-color: #c8b17a;
+    color: #c8b17a;
+    transition: border-bottom-color 0.3s, color 0.3s;
+}
+
+/* SAINT PETERSBURG */
+.container-header-popup-saint-petersburg {
     display: flex;
-    align-items: center;
-    height: fit-content;
-    padding-left: 20px;
-    margin-bottom: 20px;
+    width: fit-content;
+    cursor: pointer;
 }
 
 .popup-icon-saint-petersburg {
@@ -155,13 +169,22 @@ body {
 }
 
 .popup-header-saint-petersburg {
-    border-bottom: 1px solid black;
+    align-self: center;
 
     font-family: sans-serif;
     font-size: 16px;
+    border-bottom: 1px solid #000;
+
+    transition: border-bottom-color 0.3s, color 0.3s;
 }
 
-/* down header navigation */
+.container-header-popup-saint-petersburg:hover .popup-header-saint-petersburg {
+    border-bottom-color: #c8b17a;
+    color: #c8b17a;
+    transition: border-bottom-color 0.3s, color 0.3s;
+}
+
+/* DOWN HEADER NAVIGATION */
 .header-nav-text {
     display: inline-block;
     margin-right: 40px;
@@ -203,7 +226,7 @@ body {
     color: #c8b17a;
 }
 
-/* hamburger menu */
+/* HAMBURGER MENU */
 .container-header-hamburger {
     display: flex;
     justify-content: center;
