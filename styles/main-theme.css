@@ -2,26 +2,26 @@ body {
     margin: 0;
     padding: 0;
     background-image: url('/images/picture-backgrounds.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    /*background-size: cover;*/
+    /*background-repeat: no-repeat;*/
+    /*background-attachment: fixed;*/
 }
 
 
 /* main container */
 .container-header {
     display: flex;
-    align-items: center;
+    justify-content: space-between;
     height: 152px;
     padding-left: 142px;
     background-color: rgb(0,0,0, 0.66);
 }
 
 /* logo */
-.container-logo {
+.container-header-logo {
     height: 100%;
     width: 408px;
-    margin-right: 245px;
+    margin-right: 10px;
 
     display: flex;
     flex-direction: column;
@@ -34,20 +34,25 @@ body {
     cursor: pointer;
 }
 
-/* upper header container */
-.container-navigation {
-    height: 100%;
+/* upper header navigation */
+.container-header-right {
+    display: flex;
 }
 
-.upper-header {
+.container-header-navigation {
+    padding-top: 18px;
+}
+
+.container-header-upper {
     display: flex;
     width: 100%;
     justify-content: flex-end;
     align-items: center;
-    padding-top: 18px;
+
+    margin-bottom: 15px;
 }
 
-.mark-city-container {
+.header-mark-city {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,8 +60,8 @@ body {
     cursor: pointer;
 }
 
-.city {
-    margin-right: 40px;
+.header-city {
+    margin-right: 45px;
 
     align-self: center;
     color: #c8b17a;
@@ -70,21 +75,41 @@ body {
     cursor: pointer;
 }
 
+.header-upper-number-phone {
+    margin-right: 40px;
+
+    color: white;
+    font-family: sans-serif;
+    font-size: 19px;
+
+    transition: 0.3s ease;
+
+    cursor: pointer;
+}
+
+.header-upper-number-phone:hover {
+    transition: 0.3s ease;
+    color: #c8b17a;
+}
+
 /* change city */
-.change-city-container {
+.container-header-change-city {
     display: grid;
     overflow: hidden;
     position: absolute;
     right: 325px;
-    top: 60px;
+    top: 50px;
 
     width: 240px;
     height: 0;
     background-color: white;
+
+    transition: height 300ms ease;
 }
 
 .active {
     height: 180px;
+    transition: height 300ms ease;
 }
 
 .your-city {
@@ -130,34 +155,12 @@ body {
     font-size: 16px;
 }
 
-/* upper number phone */
-.upper-number-phone {
+
+/* down header navigation */
+.header-nav-text {
+    display: inline-block;
     margin-right: 40px;
 
-    color: white;
-    font-family: sans-serif;
-    font-size: 19px;
-
-    transition: 0.3s ease;
-
-    cursor: pointer;
-}
-
-.upper-number-phone:hover {
-    transition: 0.3s ease;
-    color: #c8b17a;
-}
-
-/* navigation */
-.down-container-navigation {
-    /*white-space: nowrap;*/
-    padding-top: 12px;
-}
-
-.nav-text {
-    margin-right: 40px;
-
-    text-decoration: none;
     color: white;
     font-size: 18px;
     font-family: sans-serif;
@@ -167,12 +170,13 @@ body {
     cursor: pointer;
 }
 
-.nav-text:hover {
+.header-nav-text:hover {
     color: #c8b17a;
     transition: 0.3s ease;
 }
 
-.number-phone {
+.down-number-phone {
+    display: inline-block;
     margin-right: 40px;
 
     color: white;
@@ -184,7 +188,7 @@ body {
     cursor: pointer;
 }
 
-.number-phone:hover {
+.down-number-phone:hover {
     transition: 0.3s ease;
     color: #c8b17a;
 }
@@ -194,8 +198,8 @@ body {
     color: #c8b17a;
 }
 
-/* hamburger-menu */
-.hamburger-menu-container {
+/* hamburger menu */
+.container-header-hamburger {
     display: flex;
     justify-content: center;
     align-items: center;

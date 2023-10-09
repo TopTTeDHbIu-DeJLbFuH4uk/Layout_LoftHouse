@@ -1,21 +1,19 @@
-const markCityContainerEl = document.querySelector('.mark-city-container');
-const cityEl = document.querySelector('.city');
-const changeCityContainerEl = document.querySelector('.change-city-container');
+const containerHeaderUpperEl = document.querySelector('.container-header-upper');
+const headerCityEl = document.querySelector('.header-city');
+const containerHeaderChangeCityEl = document.querySelector('.container-header-change-city');
 
 function expandWindow() {
-    changeCityContainerEl.classList.add('active');
-    changeCityContainerEl.style.transition = 'height 300ms ease';
+    containerHeaderChangeCityEl.classList.add('active');
 }
-if (markCityContainerEl.addEventListener('click', expandWindow) || cityEl.addEventListener('click', expandWindow));
+if (containerHeaderUpperEl.addEventListener('click', expandWindow) || headerCityEl.addEventListener('click', expandWindow));
 
 
 function collapseWindow() {
-    changeCityContainerEl.classList.remove('active');
-    changeCityContainerEl.style.transition = 'height 300ms ease';
+    containerHeaderChangeCityEl.classList.remove('active');
 }
-if (changeCityContainerEl.classList.contains('active')) {
+if (containerHeaderChangeCityEl.classList.contains('active')) {
     document.addEventListener('click', (event) => {
-        const click = event.composedPath().includes(changeCityContainerEl);
+        const click = event.composedPath().includes(containerHeaderChangeCityEl);
         if (!click) {
             collapseWindow();
         }
