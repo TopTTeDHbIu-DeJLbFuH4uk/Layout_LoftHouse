@@ -1,22 +1,41 @@
-const containerHeaderUpperEl = document.querySelector('.container-header-upper');
-const headerCityEl = document.querySelector('.header-city');
 const containerHeaderPopupChangeCityEl = document.querySelector('.container-header-popup-change-city');
 
-const expandWindow = () => {
-    containerHeaderPopupChangeCityEl.classList.add('active');
+document.addEventListener('click', (event) => {
+    const popup = event.target.closest('.container-header-popup-change-city');
+
+    if (
+        event.target.classList.contains('svg-icon-mark') ||
+        event.target.classList.contains('header-city') ||
+        event.target.classList.contains('header-mark-city')
+    ) {
+        containerHeaderPopupChangeCityEl.classList.toggle('active');
+    } else if (!popup && containerHeaderPopupChangeCityEl.classList.contains('active')) {
+        containerHeaderPopupChangeCityEl.classList.remove('active');
+    }
+
+});
+
+const headerCityEl = document.querySelector('.header-city');
+const containerHeaderPopupMoscowCityEl = document.querySelector('.container-header-popup-moscow-city');
+const containerHeaderPopupSaintPetersburg = document.querySelector('.container-header-popup-saint-petersburg');
+
+const savedCity = localStorage.getItem('selectedCity');
+
+if (savedCity) {
+    headerCityEl.innerText = savedCity;
 }
-if (containerHeaderUpperEl.addEventListener('click', expandWindow) || headerCityEl.addEventListener('click', expandWindow));
 
-// const collapseWindow = () => {
-//     containerHeaderPopupChangeCityEl.classList.remove('active');
-// }
-// document.addEventListener('click', (event) => {
-//     const click = event.composedPath().includes(containerHeaderPopupChangeCityEl);
-//     console.log(click);
-//     if (!click) {
-//         collapseWindow();
-//     }
-// });
+containerHeaderPopupMoscowCityEl.addEventListener('click', () => {
+    headerCityEl.innerText = containerHeaderPopupMoscowCityEl.innerText;
+    window.location.href = 'index.html';
 
+    localStorage.setItem('selectedCity', headerCityEl.innerText);
+});
 
+containerHeaderPopupSaintPetersburg.addEventListener('click', () => {
+    headerCityEl.innerText = containerHeaderPopupSaintPetersburg.innerText;
+    window.location.href = 'index.html';
+
+    localStorage.setItem('selectedCity', headerCityEl.innerText);
+});
 

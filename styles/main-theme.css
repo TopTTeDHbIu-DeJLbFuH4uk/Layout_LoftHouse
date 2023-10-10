@@ -147,6 +147,8 @@ body {
     font-family: sans-serif;
     font-size: 16px;
     border-bottom: 1px solid #000;
+    text-decoration: none;
+    color: black;
 
     transition: border-bottom-color 0.3s, color 0.3s;
 }
