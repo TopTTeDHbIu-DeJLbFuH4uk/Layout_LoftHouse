@@ -1,9 +1,10 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url('../images/picture-backgrounds.jpg');
+    background-image: url('/images/picture-backgrounds.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    /*background-attachment: fixed;*/
 }
 
 
@@ -372,20 +373,11 @@ body {
 
     border-right: 1px gray solid;
     border-left: 1px gray solid;
-
-    /*padding-top: 114px;*/
-    /*padding-left: 100px;*/
-    /*padding-bottom: 150px;*/
 }
 
 .main-page-header-content {
-    /*display: flex;*/
     width: 100%;
     padding: 114px 80px 150px 100px;
-    /*padding-left: 100px;*/
-    /*padding-top: 114px;*/
-    /*padding-right: 80px;*/
-    /*padding-bottom: 150px;*/
 
     color: white;
     font-size: 65px;
