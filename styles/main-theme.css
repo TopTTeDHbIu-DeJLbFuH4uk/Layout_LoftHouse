@@ -4,7 +4,6 @@ body {
     background-image: url('../images/picture-backgrounds.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    /*background-attachment: fixed;*/
 }
 
 
@@ -259,8 +258,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: fit-content;
     padding-left: 35px;
+    gap: 5px;
 
     color: white;
     font-size: 20px;
