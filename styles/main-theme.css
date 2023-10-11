@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url('/Layout_LoftHouse/images/picture-backgrounds.jpg');
+    background-image: url('/images/picture-backgrounds.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     /*background-attachment: fixed;*/
