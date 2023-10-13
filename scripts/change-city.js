@@ -8,9 +8,9 @@ document.addEventListener('click', (event) => {
         event.target.classList.contains('header-city') ||
         event.target.classList.contains('header-mark-city')
     ) {
-        containerHeaderPopupChangeCityEl.classList.toggle('active');
-    } else if (!popup && containerHeaderPopupChangeCityEl.classList.contains('active')) {
-        containerHeaderPopupChangeCityEl.classList.remove('active');
+        containerHeaderPopupChangeCityEl.classList.toggle('show-modal-window-change-city');
+    } else if (!popup && containerHeaderPopupChangeCityEl.classList.contains('show-modal-window-change-city')) {
+        containerHeaderPopupChangeCityEl.classList.remove('show-modal-window-change-city');
     }
 
 });
