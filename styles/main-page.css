@@ -362,7 +362,7 @@ body {
 
 /* MODAL WINDOW CHOOSE NUMBER PHONE */
 .background-header {
-    /*visibility: hidden;*/
+    visibility: hidden;
     position: fixed;
     height: 100%;
     width: 100%;
@@ -372,10 +372,9 @@ body {
 }
 
 .loaded-background-header {
-    /*visibility: visible;*/
+    visibility: visible;
     background-color: rgba(0, 0, 0, 0.7);
     opacity: 1;
-    /*transition: opacity 0.5s ease;*/
 }
 
 .container-choose-number-phone-header {
