@@ -1,11 +1,15 @@
+html {
+    width: 100%;
+}
+
 body {
     margin: 0;
     padding: 0;
     background: url('../images/picture-backgrounds.jpg') no-repeat center center;
     background-size: cover, 100%;
     overflow-x: hidden;
+    width: 100%;
 }
-
 
 /* MAIN CONTAINER */
 .container-header {
@@ -44,7 +48,6 @@ body {
 
 .container-header-upper {
     display: flex;
-    width: 100%;
     justify-content: flex-end;
     align-items: center;
 
@@ -386,8 +389,11 @@ body {
     border-radius: 10px;
 
     position: absolute;
+    left: 0;
+    right: 0;
     top: 100px;
-    right: 300px;
+    margin-left: auto;
+    margin-right: auto;
 
     transform: translateY(-30%);
     transition: 300ms ease;

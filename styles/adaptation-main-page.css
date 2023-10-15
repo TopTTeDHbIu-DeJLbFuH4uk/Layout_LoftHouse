@@ -307,7 +307,6 @@
     .container-choose-number-phone-header {
         position: absolute;
         top: 100px;
-        right: 250px;
         height: 145px;
     }
 
@@ -354,6 +353,15 @@
     }
 
     .container-btn-main-page-header {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 520px) {
+
+    /* MODAL WINDOW CHOOSE NUMBER PHONE */
+    .container-choose-number-phone-header {
         width: 100%;
     }
 
