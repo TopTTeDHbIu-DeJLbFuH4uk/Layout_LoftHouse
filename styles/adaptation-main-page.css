@@ -47,6 +47,7 @@
     /* MENU */
     .header-menu-text-first {
         font-size: 14px;
+        text-align: center;
     }
 
     .header-menu-text-prefix {
@@ -141,8 +142,8 @@
     /* MENU */
     .header-menu-text-first {
         flex-direction: column;
+        width: fit-content;
         align-items: center;
-        padding-left: 52px;
         gap: 0;
 
         font-size: 12px;
@@ -274,7 +275,8 @@
 
     /* MENU */
     .header-menu-text-first {
-        padding-left: 40px;
+        /*padding-left: 40px;*/
+        text-align: center;
         font-size: 10px;
     }
 
