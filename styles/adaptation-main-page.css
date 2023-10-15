@@ -10,6 +10,12 @@
         height: 46px;
     }
 
+    /* MODAL WINDOW CHANGE CITY */
+    .container-header-popup-change-city {
+        top: 50px;
+        right: 310px;
+    }
+
     /* DOWN HEADER NAVIGATION */
     .down-number-phone {
         font-size: 24px;
@@ -96,10 +102,22 @@
         margin: 0;
     }
 
-    /* MODAL WINDOW */
+    /* MODAL WINDOW CHANGE CITY */
     .container-header-popup-change-city {
         top: 75px;
-        right: 310px;
+        right: 270px;
+    }
+
+    .popup-header-city {
+        font-size: 16px;
+    }
+
+    .popup-header-moscow {
+        font-size: 14px;
+    }
+
+    .popup-header-saint-petersburg {
+        font-size: 14px;
     }
 
     /* NAVIGATION */
@@ -119,7 +137,6 @@
         width: 56px;
         height: 25px;
     }
-
 
     /* MENU */
     .header-menu-text-first {
@@ -143,12 +160,12 @@
         display: none;
     }
 
+    /* CONTAINER PHONE ADAPTATION */
     .container-menu-header-number-phone {
         display: flex;
         width: 105px;
         background-color: #c8b197;
         height: 50px;
-
 
         border-left: 1px gray solid;
         border-top: 1px gray solid;
@@ -157,12 +174,12 @@
         cursor: pointer;
     }
 
-    .svg-icon-header-phone {
+    .container-svg-icon-header-phone {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100%;
         width: 100%;
+        height: 100%;
     }
 
     /* CONTENT */
@@ -176,7 +193,6 @@
 
     .container-main-page-header-content {
         display: flex;
-
         border-left: none;
     }
 
@@ -187,8 +203,158 @@
     .main-page-header-text {
         font-size: 20px;
     }
+
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 1000px) {
+
+    /* LOGO */
+    .container-header {
+        padding: 0;
+    }
+
+    .container-header-logo {
+        display: block;
+        padding: 35px 30px 30px 30px;
+        height: fit-content;
+        width: fit-content;
+    }
+
+    .header-logo {
+        width: 210px;
+        height: 46px;
+    }
+
+    /* UPPER HEADER NAVIGATION */
+    .container-header-upper {
+        position: absolute;
+        left: 25px;
+        top: 10px;
+
+        display: flex;
+        justify-content: start;
+
+        height: fit-content;
+    }
+
+    .svg-icon-mark {
+        height: 18px;
+        width: 11px;
+    }
+
+    .header-city {
+        margin: 0;
+        border: none;
+        padding: 2px 0 0 0;
+        align-self: center;
+
+        font-size: 12px;
+    }
+
+    .header-upper-number-phone {
+        display: none;
+    }
+
+    /* MODAL WINDOW CHANGE CITY */
+    .container-header-popup-change-city {
+        top: 35px;
+        left: 25px;
+        right: 0;
+        width: 220px;
+    }
+
+    /* HAMBURGER MENU */
+    .container-header-hamburger {
+        width: 90px;
+    }
+
+    .hamburger-menu {
+        width: 40px;
+    }
+
+    /* MENU */
+    .header-menu-text-first {
+        padding-left: 40px;
+        font-size: 10px;
+    }
+
+    .header-menu-text-prefix {
+        font-size: 18px;
+    }
+
+    /* CONTAINER PHONE ADAPTATION */
+    .container-menu-header-number-phone {
+        display: flex;
+        width: 120px;
+        background-color: #c8b197;
+        height: 50px;
+    }
+
+    .container-svg-icon-header-phone {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .svg-icon-header-phone {
+        width: 25px;
+        height: 25px;
+    }
+
+    /* MODAL WINDOW CHOOSE NUMBER PHONE */
+    .container-choose-number-phone-header {
+        position: absolute;
+        top: 100px;
+        right: 250px;
+        height: 145px;
+    }
+
+    .number-phone-modal-window {
+        font-size: 22px;
+        padding: 10px;
+    }
+
+    /* CONTENT */
+    .container-main-page-header {
+        margin: 0;
+        width: 100%;
+        height: 810px;
+    }
+
+    .container-main-page-header-content {
+        height: 100%;
+        width: 100%;
+        border-right: none;
+    }
+
+    .main-page-header-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+        padding: 102px 20px 77px 20px;
+    }
+
+    .border-bottom-main-page-header-content {
+        width: 100px;
+        border-bottom: 2px solid #c8b197;;
+        padding-top: 80px;
+    }
+
+    .main-page-header-text {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        width: 100%;
+
+    }
+
+    .container-btn-main-page-header {
+        width: 100%;
+    }
 
 }

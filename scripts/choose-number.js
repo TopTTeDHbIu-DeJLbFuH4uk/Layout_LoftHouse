@@ -2,21 +2,19 @@ const containerChooseNumberPhoneHeaderEl = document.querySelector('.container-ch
 const backgroundHeaderEl = document.querySelector('.background-header');
 
 document.addEventListener('click', (event) => {
+    if (event.target.closest('.container-choose-number-phone-header')) {
+        return;
+    }
 
     const popup = event.target.closest('.container-menu-header-number-phone');
-    console.log(popup)
 
     if (popup) {
         containerChooseNumberPhoneHeaderEl.classList.toggle('show-modal-window-choose-number-phone');
+        backgroundHeaderEl.classList.add('open-background-header');
 
-        backgroundHeaderEl.classList.add('loaded-background-header');
-
-    } else if (containerChooseNumberPhoneHeaderEl.classList.contains('show-modal-window-choose-number-phone') && !popup) {
-
+    } else if (containerChooseNumberPhoneHeaderEl.classList.contains('show-modal-window-choose-number-phone')) {
         containerChooseNumberPhoneHeaderEl.classList.remove('show-modal-window-choose-number-phone');
-
-        backgroundHeaderEl.classList.remove('loaded-background-header');
+        backgroundHeaderEl.classList.remove('open-background-header');
     }
-
 });
 

@@ -3,6 +3,7 @@ body {
     padding: 0;
     background-size: cover;
     background: url('../images/picture-backgrounds.jpg') no-repeat center center fixed;
+    overflow-x: hidden;
 }
 
 
@@ -90,7 +91,7 @@ body {
     color: #c8b17a;
 }
 
-/* MODAL WINDOW */
+/* MODAL WINDOW CHANGE CITY */
 .container-header-popup-change-city {
     display: grid;
     width: 240px;
@@ -366,14 +367,13 @@ body {
     position: fixed;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.0);
+    background-color: rgba(0, 0, 0, 0.7);
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
-.loaded-background-header {
+.open-background-header {
     visibility: visible;
-    background-color: rgba(0, 0, 0, 0.7);
     opacity: 1;
 }
 
@@ -385,10 +385,9 @@ body {
     background-color: #333333;
     border-radius: 10px;
 
-
     position: absolute;
     top: 100px;
-    right: 350px;
+    right: 300px;
 
     transform: translateY(-30%);
     transition: 300ms ease;
@@ -424,7 +423,6 @@ body {
 .container-main-page-header {
     display: flex;
     justify-content: space-between;
-    height: 810px;
 
     margin-right: 145px;
     padding-left: 145px;
@@ -474,7 +472,7 @@ body {
 
 .container-btn-main-page-header {
     margin-top: 80px;
-    max-width: 500px;
+    width: 500px;
     height: 80px;
 
     border: 3px solid #c8b197;
