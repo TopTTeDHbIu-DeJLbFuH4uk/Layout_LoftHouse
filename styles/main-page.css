@@ -1,8 +1,8 @@
 body {
     margin: 0;
     padding: 0;
-    background-size: cover;
-    background: url('../images/picture-backgrounds.jpg') no-repeat center center fixed;
+    background: url('../images/picture-backgrounds.jpg') no-repeat center center;
+    background-size: 100% 100%;
     overflow-x: hidden;
 }
 
