@@ -20,8 +20,6 @@ body {
 .container-header-logo {
     height: 100%;
     width: 408px;
-    margin-right: 10px;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -242,6 +240,7 @@ body {
 .container-header-menu {
     display: flex;
     height: 51px;
+    width: 100%;
     background-color: #252525;
 }
 
