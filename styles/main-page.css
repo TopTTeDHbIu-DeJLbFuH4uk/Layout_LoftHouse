@@ -1,10 +1,12 @@
 body {
     margin: 0;
     padding: 0;
-    background: url('../images/picture-backgrounds.jpg') no-repeat center center;
-    background-size: cover, 100%;
     overflow-x: hidden;
-    width: 100%;
+}
+
+.background-image-header {
+    background: url("../images/picture-backgrounds.jpg") center no-repeat;
+    background-size: cover;
 }
 
 /* MAIN CONTAINER */
@@ -95,8 +97,8 @@ body {
     height: 0;
 
     position: absolute;
-    right: 325px;
-    top: 50px;
+    right: 310px;
+    top: 55px;
 
     overflow: hidden;
     background-color: white;
