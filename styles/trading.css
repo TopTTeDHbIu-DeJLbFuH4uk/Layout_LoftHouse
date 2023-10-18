@@ -5,6 +5,8 @@
 
 /* MODAL ROW HEADER */
 .container-modal-row {
+    position: relative;
+
     display: flex;
     justify-content: space-between;
 
@@ -33,6 +35,15 @@
 
     border: 1px solid #c8b197;
     border-radius: 50px;
+
+    transition: all .3s ease-in-out;
+
+    cursor: pointer;
+}
+
+.container-btn-params:hover {
+    transition: all .3s ease-in-out;
+    border: 1px solid #8a7565;
 }
 
 .btn-params-text {
@@ -55,40 +66,117 @@
     align-items: center;
 }
 
-/* SHOWCASE HOUSES */
+/* MODAL WINDOW SELECTION HOUSE */
+.container-modal-window-selection-house {
+    position: absolute;
+    right: 40px;
+    top: 165px;
+
+    width: 450px;
+    height: 265px;
+    background-color: #ffffff;
+}
+
+.modal-window-selection-house {
+    padding: 25px 30px;
+}
+
+.price-selection-house {
+    font-family: sans-serif;
+}
+
+.container-select-prices {
+    display: flex;
+    padding-top: 5px;
+}
+
+.from-to {
+    color: #b7b7b7;
+    font-family: sans-serif;
+    cursor: default;
+}
+
+.input {
+    width: 160px;
+    border: none;
+    outline: none;
+    background-color: #e2e2e2;
+    padding: 5px 10px;
+}
+
+.square-selection-house {
+    padding-top: 25px;
+}
+
+.container-select-square {
+    display: flex;
+    padding-top: 5px;
+    margin-bottom: 20px;
+}
+
+.container-btn-apply {
+    width: 100%;
+    height: 40px;
+    background-color: #c8b197;
+
+    cursor: pointer;
+}
+
+.btn-apply {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    font-family: sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+
+/* SHOWCASE ROW 1 */
 .showcase-houses {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
 
-
     border-left: 1px solid #b0b0b0;
+}
+
+.container-item {
+    height: 100%;
+    border-right: 1px solid #b0b0b0;
 }
 
 .item-1 {
     width: 536px;
     height: 340px;
-    background: url("../images/item-1.jpg") no-repeat;
+    background: url("../images/item-1.jpg") center no-repeat;
     background-size: cover;
+    border-top: 1px solid #b0b0b0;
 
-    border-right: 1px solid #b0b0b0;
+    cursor: pointer;
 }
 
 .item-2 {
     width: 536px;
     height: 340px;
-    background: url("../images/item-2.jpg") no-repeat;
+    background: url("../images/item-2.jpg") center no-repeat;
     background-size: cover;
+    border-top: 1px solid #b0b0b0;
 
-    border-right: 1px solid #b0b0b0;
+    cursor: pointer;
 }
 
 .item-3 {
     width: 537px;
     height: 340px;
-    background: url("../images/item-3.jpg") no-repeat;
+    background: url("../images/item-3.jpg") center no-repeat;
     background-size: cover;
+    border-top: 1px solid #b0b0b0;
 
-    border-right: 1px solid #b0b0b0;
+    cursor: pointer;
 }
 
 .container-details {
@@ -96,9 +184,6 @@
 }
 
 .model-house {
-    display: flex;
-    width: fit-content;
-
     font-size: 36px;
     line-height: 49px;
     letter-spacing: 0.15em;
@@ -106,6 +191,15 @@
     color: white;
     font-weight: 400;
     font-family: sans-serif;
+
+    transition: all 0.3s ease;
+
+    cursor: pointer;
+}
+
+.model-house:hover {
+    transition: all 0.3s ease;
+    color: #c8b17a;
 }
 
 .price-house {
@@ -136,6 +230,8 @@
     width: 150px;
     height: 55px;
     border: 3px solid #c8b197;
+
+    cursor: pointer;
 }
 
 .btn-style-more-detailed {
@@ -151,13 +247,22 @@
     font-family: sans-serif;
     line-height: 18px;
     text-transform: uppercase;
+
+    transition: all .3s ease-in-out;
+}
+
+.btn-more-detailed:hover .btn-style-more-detailed {
+    transition: all .3s ease-in-out;
+    background-color: #c8b197;
+    color: #000000;
 }
 
 .btn-presentation {
+    background-color: #c8b197;
     width: 205px;
     height: 60px;
 
-    background-color: #c8b197;
+    cursor: pointer;
 }
 
 .btn-style-presentation {
@@ -179,3 +284,138 @@
 .container-svg-icon-pdf {
     display: flex;
 }
+
+/* SHOWCASE ROW 2 */
+.item-4 {
+    width: 536px;
+    height: 340px;
+    background: url("../images/item-4.jpg") center no-repeat;
+    background-size: cover;
+    border-top: 1px solid #b0b0b0;
+
+    cursor: pointer;
+}
+
+.item-5 {
+    width: 536px;
+    height: 340px;
+    background: url("../images/item-5.jpg") center no-repeat;
+    background-size: cover;
+    border-top: 1px solid #b0b0b0;
+
+    cursor: pointer;
+}
+
+.item-6 {
+    width: 537px;
+    height: 340px;
+    background: url("../images/item-6.jpg") center no-repeat;
+    background-size: cover;
+    border-top: 1px solid #b0b0b0;
+
+    cursor: pointer;
+}
+
+/* SHOWCASE ROW 3 */
+.item-7 {
+    width: 536px;
+    height: 340px;
+    background: url("../images/item-7.jpg") center no-repeat;
+    background-size: cover;
+    border-top: 1px solid #b0b0b0;
+
+    cursor: pointer;
+}
+
+.item-8 {
+    width: 536px;
+    height: 340px;
+    background: url("../images/item-8.jpg") center no-repeat;
+    background-size: cover;
+    border-top: 1px solid #b0b0b0;
+
+    cursor: pointer;
+}
+
+.item-9 {
+    width: 537px;
+    height: 340px;
+    background: url("../images/item-9.jpg") center no-repeat;
+    background-size: cover;
+    border-top: 1px solid #b0b0b0;
+
+    cursor: pointer;
+}
+
+/* SHOW ALL HOUSES */
+.container-show-all-houses {
+    text-align: center;
+    margin-right: 145px;
+
+    padding-top: 40px;
+
+    border-right: 1px solid #b0b0b0;
+    border-top: 1px solid #b0b0b0;
+    border-left: 1px solid #b0b0b0;
+}
+
+.show-all-houses {
+    background: transparent;
+    border: none;
+    padding: 0;
+
+    margin-bottom: 30px;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 19px;
+    font-family: sans-serif;
+    color: #ffffff;
+    border-bottom: 1px solid #ffffff;
+
+    transition: all .3s ease-in-out;
+
+    cursor: pointer;
+}
+
+.show-all-houses:hover {
+    transition: all .3s ease-in-out;
+    border-bottom: 1px solid #c8b197;
+    color: #c8b197;
+}
+
+/* HIDDEN HOUSES */
+.hidden-house {
+    display: none;
+}
+
+.border-bottom-container-details {
+    border-bottom: 1px solid #b0b0b0;
+}
+
+.item-10 {
+    width: 537px;
+    height: 340px;
+    background: url("../images/item-10.jpg") center no-repeat;
+    background-size: cover;
+    border-top: 1px solid #b0b0b0;
+
+    cursor: pointer;
+}
+
+.item-11 {
+    width: 535px;
+    height: 340px;
+    background: url("../images/item-11.jpg") center no-repeat;
+    background-size: cover;
+    border-top: 1px solid #b0b0b0;
+
+    cursor: pointer;
+}
+
+.container-item-empty {
+    padding-left: 537px;
+    border-right: 1px solid #b0b0b0;
+    border-top: 1px solid #b0b0b0;
+}
+
