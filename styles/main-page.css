@@ -235,7 +235,7 @@ body {
 
     border-left: 1px gray solid;
     height: 152px;
-    width: 145px;
+    width: 146px;
 }
 
 /* MENU */
@@ -425,7 +425,7 @@ body {
     display: flex;
     justify-content: space-between;
 
-    margin-right: 145px;
+    margin-right: 146px;
     padding-left: 145px;
 
     border-top: 1px gray solid;
@@ -498,3 +498,8 @@ body {
     transition: 0.3s ease;
 }
 
+.container-void-img {
+    border-top: 1px solid #b0b0b0;
+    border-right: 1px solid #b0b0b0;
+    width: 536px;
+}

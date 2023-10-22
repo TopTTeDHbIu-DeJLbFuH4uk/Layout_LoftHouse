@@ -1,6 +1,7 @@
 .main-container-trading {
     background-color: #6a6a6a;
     padding-left: 145px;
+    /*padding-right: 145px;*/
 }
 
 /* MODAL ROW HEADER */
@@ -13,8 +14,8 @@
     border-left: 1px solid #b0b0b0;
     border-right: 1px solid #b0b0b0;
 
-    margin-right: 145px;
     padding: 80px 40px 50px 150px;
+    margin-right: 146px;
 }
 
 .modal-row-text {
@@ -167,52 +168,36 @@
     font-size: 14px;
 }
 
-/* SHOWCASE ROW 1 */
-.showcase-houses {
+/* SHOWCASE */
+.container-items {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-
-    border-left: 1px solid #b0b0b0;
-}
-
-.container-item {
-    height: 100%;
     border-right: 1px solid #b0b0b0;
+    border-left: 1px solid #b0b0b0;
+    border-bottom: 1px solid #b0b0b0;
 }
 
-.item-1 {
-    width: 536px;
-    height: 340px;
-    background: url("../images/item-1.jpg") center no-repeat;
+.item {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 536px;
     background-size: cover;
     border-top: 1px solid #b0b0b0;
+    border-right: 1px solid #b0b0b0;
 
     cursor: pointer;
 }
 
-.item-2 {
-    width: 536px;
-    height: 340px;
-    background: url("../images/item-2.jpg") center no-repeat;
-    background-size: cover;
-    border-top: 1px solid #b0b0b0;
-
-    cursor: pointer;
+.item > img {
+    max-width: 100%;
+    max-height: 100%;
 }
 
-.item-3 {
-    width: 537px;
-    height: 340px;
-    background: url("../images/item-3.jpg") center no-repeat;
-    background-size: cover;
-    border-top: 1px solid #b0b0b0;
-
-    cursor: pointer;
-}
-
-.container-details {
-    padding: 35px 40px 40px 40px;
+.item-details {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 40px;
 }
 
 .model-house {
@@ -234,6 +219,11 @@
     color: #c8b17a;
 }
 
+.container-info {
+    display: flex;
+    justify-content: space-between;
+}
+
 .price-house {
     display: flex;
     justify-content: space-between;
@@ -249,6 +239,8 @@
     color: #DE0D0D;
     font-weight: 700;
     line-height: 78px;
+    font-size: 36px;
+    font-family: sans-serif;
 }
 
 .container-buttons {
@@ -317,68 +309,6 @@
     display: flex;
 }
 
-/* SHOWCASE ROW 2 */
-.item-4 {
-    width: 536px;
-    height: 340px;
-    background: url("../images/item-4.jpg") center no-repeat;
-    background-size: cover;
-    border-top: 1px solid #b0b0b0;
-
-    cursor: pointer;
-}
-
-.item-5 {
-    width: 536px;
-    height: 340px;
-    background: url("../images/item-5.jpg") center no-repeat;
-    background-size: cover;
-    border-top: 1px solid #b0b0b0;
-
-    cursor: pointer;
-}
-
-.item-6 {
-    width: 537px;
-    height: 340px;
-    background: url("../images/item-6.jpg") center no-repeat;
-    background-size: cover;
-    border-top: 1px solid #b0b0b0;
-
-    cursor: pointer;
-}
-
-/* SHOWCASE ROW 3 */
-.item-7 {
-    width: 536px;
-    height: 340px;
-    background: url("../images/item-7.jpg") center no-repeat;
-    background-size: cover;
-    border-top: 1px solid #b0b0b0;
-
-    cursor: pointer;
-}
-
-.item-8 {
-    width: 536px;
-    height: 340px;
-    background: url("../images/item-8.jpg") center no-repeat;
-    background-size: cover;
-    border-top: 1px solid #b0b0b0;
-
-    cursor: pointer;
-}
-
-.item-9 {
-    width: 537px;
-    height: 340px;
-    background: url("../images/item-9.jpg") center no-repeat;
-    background-size: cover;
-    border-top: 1px solid #b0b0b0;
-
-    cursor: pointer;
-}
-
 /* SHOW ALL HOUSES */
 .container-show-all-houses {
     text-align: center;
@@ -420,34 +350,3 @@
 .hidden-house {
     display: none;
 }
-
-.border-bottom-container-details {
-    border-bottom: 1px solid #b0b0b0;
-}
-
-.item-10 {
-    width: 537px;
-    height: 340px;
-    background: url("../images/item-10.jpg") center no-repeat;
-    background-size: cover;
-    border-top: 1px solid #b0b0b0;
-
-    cursor: pointer;
-}
-
-.item-11 {
-    width: 535px;
-    height: 340px;
-    background: url("../images/item-11.jpg") center no-repeat;
-    background-size: cover;
-    border-top: 1px solid #b0b0b0;
-
-    cursor: pointer;
-}
-
-.container-item-empty {
-    padding-left: 537px;
-    border-right: 1px solid #b0b0b0;
-    border-top: 1px solid #b0b0b0;
-}
-
