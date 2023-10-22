@@ -73,12 +73,30 @@
     top: 165px;
 
     width: 450px;
-    height: 265px;
     background-color: #ffffff;
 }
 
+.svg-icon-close-modal-window-selection-house {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+
+    border: none;
+    background: transparent;
+
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+
+    cursor: pointer;
+}
+
 .modal-window-selection-house {
-    padding: 25px 30px;
+    /*padding: 25px 30px;*/
+    padding-top: 25px;
+    padding-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 25px;
 }
 
 .price-selection-house {
@@ -87,6 +105,8 @@
 
 .container-select-prices {
     display: flex;
+    gap: 10px;
+    width: 100%;
     padding-top: 5px;
 }
 
@@ -97,19 +117,32 @@
 }
 
 .input {
-    width: 160px;
+    width: 170px;
     border: none;
     outline: none;
     background-color: #e2e2e2;
     padding: 5px 10px;
 }
 
+.hidden-filter-invalid-msg {
+    display: none;
+}
+
+.invalid {
+    color: #ff0000;
+    font-family: sans-serif;
+    font-size: 14px;
+    padding-top: 5px;
+}
+
 .square-selection-house {
     padding-top: 25px;
+    font-family: sans-serif;
 }
 
 .container-select-square {
     display: flex;
+    gap: 10px;
     padding-top: 5px;
     margin-bottom: 20px;
 }
@@ -133,7 +166,6 @@
     text-transform: uppercase;
     font-size: 14px;
 }
-
 
 /* SHOWCASE ROW 1 */
 .showcase-houses {

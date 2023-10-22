@@ -223,23 +223,33 @@
         </div>
         <!--  Modal window selection house  -->
         <div class="container-modal-window-selection-house">
+            <button class="svg-icon-close-modal-window-selection-house">
+                <svg width="12" height="11" viewBox="0 0 44 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="3.11535" y1="1.49391" x2="42.0062" y2="40.3848" stroke="black" stroke-width="3"></line>
+                    <line x1="1.99403" y1="40.3848" x2="40.8849" y2="1.4939" stroke="black" stroke-width="3"></line>
+                </svg>
+            </button>
             <div class="modal-window-selection-house">
                 <div class="price-selection-house">цена, ₽</div>
                 <div class="container-select-prices">
                     <div class="from-to">от
-                        <input class="input input-from-price" type="number" min="1000000">
+                        <input class="input filter-input" type="number" placeholder="1 000 000" id="price-from">
+                        <div class="filter-invalid-msg hidden-filter-invalid-msg">Введите цену от</div>
                     </div>
                     <div class="from-to">до
-                        <input class="input input-before-price" type="number">
+                        <input class="input filter-input" type="number" placeholder="15 000 000" id="price-to">
+                        <div class="filter-invalid-msg hidden-filter-invalid-msg">Введите цену до</div>
                     </div>
                 </div>
                 <div class="square-selection-house">площадь, м2</div>
                 <div class="container-select-square">
                     <div class="from-to">от
-                        <input class="input input-from-square" type="number">
+                        <input class="input filter-input" type="number" placeholder="50" id="area-from">
+                        <div class="filter-invalid-msg hidden-filter-invalid-msg">Введите площадь от</div>
                     </div>
-                    <div class="from-to">от
-                        <input class="input input-before-square" type="number">
+                    <div class="from-to">до
+                        <input class="input filter-input" type="number" placeholder="250" id="area-to">
+                        <div class="filter-invalid-msg hidden-filter-invalid-msg">Введите площадь до</div>
                     </div>
                 </div>
                 <div class="container-btn-apply">
@@ -249,7 +259,6 @@
         </div>
         <!--  Modal window selection house  -->
     </div>
-
     <div class="showcase-houses">
         <div class="container-item">
             <div class="item-1"></div>
@@ -774,6 +783,8 @@
 <script src="scripts/change-city.js"></script>
 <script src="scripts/choose-number.js"></script>
 <script src="scripts/display-houses.js"></script>
+<script type="module" src="scripts/find-house.js"></script>
+<!--<script src="scripts/all-houses.js"></script>-->
 </body>
 </html>
 
