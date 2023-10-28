@@ -189,6 +189,7 @@ const applyElClickHandler = () => {
 
     clearContainerItemEls();
     buttonEl.remove();
+    showAllHousesEl.classList.remove('show-all-houses');
     containerShowAllHousesEl.classList.remove('container-show-all-houses');
 
     if (!houses) {
@@ -207,23 +208,30 @@ containerBtnApplyEl.addEventListener('click', (e) => {
     applyElClickHandler(e);
 });
 
-// const reset = () => {
-//     filterInputEls.forEach((filterInputEl) => {
-//         filterInputEl.value = '';
-//     });
-//     containerBtnResetEl.classList.add('hidden-btn-reset');
-//
-//     const noResultsMessageEl = document.querySelector('.no-results-message');
-//     if (!noResultsMessageEl.classList.contains('hidden-message')) {
-//         noResultsMessageEl.classList.add('hidden-message');
-//     }
-//
-//     allHouses.forEach((house, index) => {
-//         renderHouse(house, index);
-//     });
-// };
-//
-// containerBtnResetEl.addEventListener('click', (e) => {
-//     reset(e);
-// });
+const reset = () => {
+    filterInputEls.forEach((filterInputEl) => {
+        filterInputEl.value = '';
+    });
+    containerBtnResetEl.classList.add('hidden-btn-reset');
+
+    containerShowAllHousesEl.classList.add('container-show-all-houses');
+
+    const button = document.createElement('button');
+    button.classList.add('show-all-houses');
+    button.innerText = '+ Все дома';
+    containerShowAllHousesEl.append(button);
+
+    const noResultsMessageEl = document.querySelector('.no-results-message');
+    if (!noResultsMessageEl.classList.contains('hidden-message')) {
+        noResultsMessageEl.classList.add('hidden-message');
+    }
+
+    allHouses.forEach((house, index) => {
+        renderHouse(house, index);
+    });
+};
+
+containerBtnResetEl.addEventListener('click', (e) => {
+    reset(e);
+});
 
