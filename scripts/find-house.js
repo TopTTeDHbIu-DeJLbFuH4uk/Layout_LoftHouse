@@ -80,56 +80,150 @@ const allHouses = [
 ];
 
 const containerBtnApplyEl = document.querySelector('.container-btn-apply');
+const containerBtnResetEl = document.querySelector('.container-btn-reset');
 const filterInputEls = [...document.querySelectorAll('.filter-input')];
 const filterInvalidMsgEls = [...document.querySelectorAll('.filter-invalid-msg')];
-const containerItemEls = [...document.querySelectorAll('.item')];
+const templateEl = document.querySelector('section > template');
+const containerItemEls = document.querySelector('.container-items');
+
+const renderHouse = (house, index) => {
+    const houseTemplate = templateEl.content.firstElementChild.cloneNode(true);
+
+   if (index >= 9) {
+       houseTemplate.classList.add('hidden');
+   }
+
+    const imgEl = houseTemplate.querySelector('img');
+    imgEl.src = house.img;
+
+    const modelHouseEl = houseTemplate.querySelector('.model-house');
+    modelHouseEl.innerText = house.title;
+
+    const priceHouseEl = houseTemplate.querySelector('.price-house');
+    priceHouseEl.innerText = `${new Intl.NumberFormat('ru-RU', {}).format(house.price).replace(/\s/g, '.')} ₽`;
+
+    const sizeHouseEl = houseTemplate.querySelector('.size-house');
+    sizeHouseEl.innerText = `${house.area}м2`;
+
+    containerItemEls.append(houseTemplate);
+};
+
+allHouses.forEach((house, index) => {
+    renderHouse(house, index);
+});
+
+const showAllHousesEl = document.querySelector('.show-all-houses');
+const hiddenHouseEls = [...document.querySelectorAll('.hidden')];
+const containerShowAllHousesEl = document.querySelector('.container-show-all-houses');
+const buttonEl = document.querySelector('.container-show-all-houses > button');
+
+showAllHousesEl.addEventListener('click', () => {
+    hiddenHouseEls.forEach(hiddenHouse => {
+        hiddenHouse.classList.remove('hidden');
+    });
+    buttonEl.remove();
+    containerShowAllHousesEl.classList.remove('container-show-all-houses');
+});
+
+const clearContainerItemEls = () => {
+    [...containerItemEls.children].forEach(el => el.remove());
+};
+
+const getHouses = (filters) => {
+    console.log(filters);
+    const response = allHouses.filter(house => {
+        for (const filterKey in filters) {
+            const filterVal = filters[filterKey];
+            switch (filterKey) {
+                case 'price': {
+                    if (house.price < filterVal.from) return false;
+                    if (house.price > filterVal.to) return false;
+                    break;
+                }
+                case 'area': {
+                    if (house.area < filterVal.from) return false;
+                    if (house.area > filterVal.to) return false;
+                    break;
+                }
+            }
+        }
+        return true;
+    });
+    return response.length ? response : null;
+};
+
+const isValidFilterInputEl = (filterInputEl) => {
+    return !!filterInputEl.value || filterInputEl.value === 0;
+};
+
+const validateFilterInputEl = (filterInputEl) => {
+    const isValid = isValidFilterInputEl(filterInputEl);
+    filterInputEl.filterInvalidMsgEls.classList.toggle('hidden-filter-invalid-msg', isValid);
+    return isValid;
+};
 
 filterInputEls.forEach((filterInputEl, index) => {
     filterInputEl.filterInvalidMsgEls = filterInvalidMsgEls[index];
+
+    filterInputEl.addEventListener('input', () => {
+        validateFilterInputEl(filterInputEl);
+    });
 });
 
-const removeHouses = (filters) => {
-    allHouses.forEach((house, index) => {
-        const priceInRange = house.price >= filters.price.from && house.price <= filters.price.to;
-        const areaInRange = house.area >= filters.area.from && house.area <= filters.area.to;
+const applyElClickHandler = () => {
 
-        if (!(priceInRange && areaInRange)) {
-            const houseElement = containerItemEls[index];
-            if (houseElement) {
-                houseElement.remove();
-                console.log('+');
-            }
+    filterInputEls.forEach(filterInputEl => {
+        if (!validateFilterInputEl(filterInputEl)) {
+            return false;
         }
+    });
+
+    const filters = {};
+    filterInputEls.forEach(filterInputEl => {
+        const [filterKey, filterSubKey] = filterInputEl.id.split('-');
+        const filter = filters[filterKey] = filters[filterKey] || {};
+        filter[filterSubKey] = filterInputEl.value;
+    });
+
+    const houses = getHouses(filters);
+
+    clearContainerItemEls();
+    buttonEl.remove();
+    containerShowAllHousesEl.classList.remove('container-show-all-houses');
+
+    if (!houses) {
+        const noResultsMessageEl = document.querySelector('.no-results-message');
+        noResultsMessageEl.classList.remove('hidden-message');
+        return false;
+    }
+
+    houses.forEach(house => {
+        renderHouse(house);
     });
 };
 
-containerBtnApplyEl.addEventListener('click', () => {
-    const filters = {};
-
-    filterInputEls.forEach(filterInputEl => {
-
-        if (filterInputEl.value || filterInputEl.value === 0) {
-            const [filterKey, filterSubKey] = filterInputEl.id.split('-');
-            const filter = filters[filterKey] = filters[filterKey] || {};
-            filter[filterSubKey] = filterInputEl.value;
-        } else {
-            filterInputEl.filterInvalidMsgEls.classList.add('invalid');
-            filterInputEl.filterInvalidMsgEls.classList.remove('hidden-filter-invalid-msg');
-        }
-
-        if (!filterInputEl.listensToChanges) {
-            filterInputEl.addEventListener('input', () => {
-                const isValid = filterInputEl.value || filterInputEl.value === 0;
-                filterInputEl.filterInvalidMsgEls.classList.toggle('invalid', !isValid);
-                filterInputEl.filterInvalidMsgEls.classList.toggle('hidden-filter-invalid-msg', isValid);
-            });
-            filterInputEl.listensToChanges = true;
-        }
-
-    });
-    removeHouses(filters);
+containerBtnApplyEl.addEventListener('click', (e) => {
+    containerBtnResetEl.classList.remove('hidden-btn-reset');
+    applyElClickHandler(e);
 });
 
-
-
+// const reset = () => {
+//     filterInputEls.forEach((filterInputEl) => {
+//         filterInputEl.value = '';
+//     });
+//     containerBtnResetEl.classList.add('hidden-btn-reset');
+//
+//     const noResultsMessageEl = document.querySelector('.no-results-message');
+//     if (!noResultsMessageEl.classList.contains('hidden-message')) {
+//         noResultsMessageEl.classList.add('hidden-message');
+//     }
+//
+//     allHouses.forEach((house, index) => {
+//         renderHouse(house, index);
+//     });
+// };
+//
+// containerBtnResetEl.addEventListener('click', (e) => {
+//     reset(e);
+// });
 

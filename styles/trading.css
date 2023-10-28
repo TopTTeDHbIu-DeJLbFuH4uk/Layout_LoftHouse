@@ -1,7 +1,6 @@
 .main-container-trading {
     background-color: #6a6a6a;
     padding-left: 145px;
-    /*padding-right: 145px;*/
 }
 
 /* MODAL ROW HEADER */
@@ -13,6 +12,7 @@
 
     border-left: 1px solid #b0b0b0;
     border-right: 1px solid #b0b0b0;
+    border-bottom: 1px solid #b0b0b0;
 
     padding: 80px 40px 50px 150px;
     margin-right: 146px;
@@ -93,7 +93,6 @@
 }
 
 .modal-window-selection-house {
-    /*padding: 25px 30px;*/
     padding-top: 25px;
     padding-left: 30px;
     margin-right: 30px;
@@ -111,7 +110,14 @@
     padding-top: 5px;
 }
 
+.input-label {
+    display: flex;
+    flex-direction: column;
+}
+
 .from-to {
+    margin-bottom: 3px;
+
     color: #b7b7b7;
     font-family: sans-serif;
     cursor: default;
@@ -129,7 +135,7 @@
     display: none;
 }
 
-.invalid {
+.filter-invalid-msg {
     color: #ff0000;
     font-family: sans-serif;
     font-size: 14px;
@@ -168,13 +174,34 @@
     font-size: 14px;
 }
 
+.container-btn-reset {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    padding-top: 15px;
+
+    cursor: pointer;
+}
+
+.hidden-btn-reset {
+    display: none;
+}
+
+.btn-reset {
+    color: #000000;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
 /* SHOWCASE */
 .container-items {
     display: flex;
     flex-wrap: wrap;
     border-right: 1px solid #b0b0b0;
     border-left: 1px solid #b0b0b0;
-    border-bottom: 1px solid #b0b0b0;
 }
 
 .item {
@@ -183,10 +210,7 @@
 
     max-width: 536px;
     background-size: cover;
-    border-top: 1px solid #b0b0b0;
     border-right: 1px solid #b0b0b0;
-
-    cursor: pointer;
 }
 
 .item > img {
@@ -198,6 +222,7 @@
     display: flex;
     flex-direction: column;
     padding: 40px 40px;
+    border-bottom: 1px solid #b0b0b0;
 }
 
 .model-house {
@@ -312,13 +337,12 @@
 /* SHOW ALL HOUSES */
 .container-show-all-houses {
     text-align: center;
-    margin-right: 145px;
+    margin-right: 146px;
 
     padding-top: 40px;
-
-    border-right: 1px solid #b0b0b0;
-    border-top: 1px solid #b0b0b0;
     border-left: 1px solid #b0b0b0;
+    /*border-top: 1px solid #b0b0b0;*/
+    border-right: 1px solid #b0b0b0;
 }
 
 .show-all-houses {
@@ -346,7 +370,23 @@
     color: #c8b197;
 }
 
-/* HIDDEN HOUSES */
-.hidden-house {
+.hidden {
+    display: none;
+}
+
+/* NO RESULTS MESSAGE */
+.no-results-message {
+    padding: 40px 35px;
+    margin-right: 146px;
+    text-align: center;
+
+    border-left: 1px solid #b0b0b0;
+    border-right: 1px solid #b0b0b0;
+
+    color: #ffffff;
+    font-family: sans-serif;
+}
+
+.hidden-message {
     display: none;
 }

@@ -497,9 +497,3 @@ body {
     color: #c8b17a;
     transition: 0.3s ease;
 }
-
-.container-void-img {
-    border-top: 1px solid #b0b0b0;
-    border-right: 1px solid #b0b0b0;
-    width: 536px;
-}
