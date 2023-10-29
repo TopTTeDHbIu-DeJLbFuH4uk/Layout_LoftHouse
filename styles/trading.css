@@ -213,9 +213,15 @@
     border-right: 1px solid #b0b0b0;
 }
 
-.item > img {
+.item-img-wrapper {
     max-width: 100%;
-    max-height: 100%;
+    aspect-ratio: 1.8;
+}
+
+.item-img-wrapper > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .item-details {
@@ -334,22 +340,28 @@
     display: flex;
 }
 
+.hidden {
+    display: none;
+}
+
 /* SHOW ALL HOUSES */
 .container-show-all-houses {
-    text-align: center;
+    display: flex;
+
     margin-right: 146px;
 
     padding-top: 40px;
     border-left: 1px solid #b0b0b0;
-    /*border-top: 1px solid #b0b0b0;*/
     border-right: 1px solid #b0b0b0;
 }
 
-.show-all-houses {
-    background: transparent;
-    border: none;
-    padding: 0;
+.show-all-houses-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
 
+.show-all-houses {
     margin-bottom: 30px;
 
     font-weight: 400;
@@ -368,10 +380,6 @@
     transition: all .3s ease-in-out;
     border-bottom: 1px solid #c8b197;
     color: #c8b197;
-}
-
-.hidden {
-    display: none;
 }
 
 /* NO RESULTS MESSAGE */

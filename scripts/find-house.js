@@ -89,9 +89,9 @@ const containerItemEls = document.querySelector('.container-items');
 const renderHouse = (house, index) => {
     const houseTemplate = templateEl.content.firstElementChild.cloneNode(true);
 
-   if (index >= 9) {
-       houseTemplate.classList.add('hidden');
-   }
+    if (index >= 9) {
+        houseTemplate.classList.add('hidden');
+    }
 
     const imgEl = houseTemplate.querySelector('img');
     imgEl.src = house.img;
@@ -115,14 +115,16 @@ allHouses.forEach((house, index) => {
 const showAllHousesEl = document.querySelector('.show-all-houses');
 const hiddenHouseEls = [...document.querySelectorAll('.hidden')];
 const containerShowAllHousesEl = document.querySelector('.container-show-all-houses');
-const buttonEl = document.querySelector('.container-show-all-houses > button');
+const showAllHousesWrapperEl = document.querySelector('.show-all-houses-wrapper');
 
 showAllHousesEl.addEventListener('click', () => {
     hiddenHouseEls.forEach(hiddenHouse => {
         hiddenHouse.classList.remove('hidden');
     });
-    buttonEl.remove();
     containerShowAllHousesEl.classList.remove('container-show-all-houses');
+    showAllHousesWrapperEl.classList.remove('show-all-houses-wrapper');
+    showAllHousesEl.classList.remove('show-all-houses');
+    showAllHousesEl.innerText = '';
 });
 
 const clearContainerItemEls = () => {
@@ -130,7 +132,6 @@ const clearContainerItemEls = () => {
 };
 
 const getHouses = (filters) => {
-    console.log(filters);
     const response = allHouses.filter(house => {
         for (const filterKey in filters) {
             const filterVal = filters[filterKey];
@@ -188,9 +189,11 @@ const applyElClickHandler = () => {
     const houses = getHouses(filters);
 
     clearContainerItemEls();
-    buttonEl.remove();
-    showAllHousesEl.classList.remove('show-all-houses');
+
     containerShowAllHousesEl.classList.remove('container-show-all-houses');
+    showAllHousesWrapperEl.classList.remove('show-all-houses-wrapper');
+    showAllHousesEl.classList.remove('show-all-houses');
+    showAllHousesEl.innerText = '';
 
     if (!houses) {
         const noResultsMessageEl = document.querySelector('.no-results-message');
@@ -208,30 +211,28 @@ containerBtnApplyEl.addEventListener('click', (e) => {
     applyElClickHandler(e);
 });
 
-const reset = () => {
+const resetFunction = () => {
+    containerBtnResetEl.classList.add('hidden-btn-reset');
+
     filterInputEls.forEach((filterInputEl) => {
         filterInputEl.value = '';
     });
-    containerBtnResetEl.classList.add('hidden-btn-reset');
-
-    containerShowAllHousesEl.classList.add('container-show-all-houses');
-
-    const button = document.createElement('button');
-    button.classList.add('show-all-houses');
-    button.innerText = '+ Все дома';
-    containerShowAllHousesEl.append(button);
 
     const noResultsMessageEl = document.querySelector('.no-results-message');
     if (!noResultsMessageEl.classList.contains('hidden-message')) {
         noResultsMessageEl.classList.add('hidden-message');
     }
 
+    containerShowAllHousesEl.classList.add('container-show-all-houses');
+    showAllHousesWrapperEl.classList.add('show-all-houses-wrapper');
+    showAllHousesEl.classList.add('show-all-houses');
+    showAllHousesEl.innerText = '+ Все дома';
+
     allHouses.forEach((house, index) => {
         renderHouse(house, index);
     });
 };
 
-containerBtnResetEl.addEventListener('click', (e) => {
-    reset(e);
-});
+containerBtnResetEl.addEventListener('click', resetFunction);
+
 
