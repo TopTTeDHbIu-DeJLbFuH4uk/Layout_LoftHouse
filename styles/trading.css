@@ -68,6 +68,10 @@
 }
 
 /* MODAL WINDOW SELECTION HOUSE */
+.hidden-modal-window-selection-house {
+    display: none;
+}
+
 .container-modal-window-selection-house {
     position: absolute;
     right: 40px;
@@ -216,6 +220,8 @@
 .item-img-wrapper {
     max-width: 100%;
     aspect-ratio: 1.8;
+
+    cursor: pointer;
 }
 
 .item-img-wrapper > img {

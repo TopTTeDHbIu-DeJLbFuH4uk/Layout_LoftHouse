@@ -85,6 +85,7 @@ const filterInputEls = [...document.querySelectorAll('.filter-input')];
 const filterInvalidMsgEls = [...document.querySelectorAll('.filter-invalid-msg')];
 const templateEl = document.querySelector('section > template');
 const containerItemEls = document.querySelector('.container-items');
+const noResultsMessageEl = document.querySelector('.no-results-message');
 
 const renderHouse = (house, index) => {
     const houseTemplate = templateEl.content.firstElementChild.cloneNode(true);
@@ -196,11 +197,11 @@ const applyElClickHandler = () => {
     showAllHousesEl.innerText = '';
 
     if (!houses) {
-        const noResultsMessageEl = document.querySelector('.no-results-message');
         noResultsMessageEl.classList.remove('hidden-message');
         return false;
     }
 
+    noResultsMessageEl.classList.add('hidden-message');
     houses.forEach(house => {
         renderHouse(house);
     });
@@ -211,28 +212,27 @@ containerBtnApplyEl.addEventListener('click', (e) => {
     applyElClickHandler(e);
 });
 
+// containerBtnApplyEl.addEventListener('keypress', (e) => {
+//    if (e.keyCode === 13) {
+//        document.querySelector('.container-btn-apply').click();
+//        containerBtnResetEl.classList.remove('hidden-btn-reset');
+//        applyElClickHandler(e);
+//    }
+// });
+
 const resetFunction = () => {
-    containerBtnResetEl.classList.add('hidden-btn-reset');
-
-    filterInputEls.forEach((filterInputEl) => {
-        filterInputEl.value = '';
-    });
-
-    const noResultsMessageEl = document.querySelector('.no-results-message');
-    if (!noResultsMessageEl.classList.contains('hidden-message')) {
-        noResultsMessageEl.classList.add('hidden-message');
-    }
-
-    containerShowAllHousesEl.classList.add('container-show-all-houses');
-    showAllHousesWrapperEl.classList.add('show-all-houses-wrapper');
-    showAllHousesEl.classList.add('show-all-houses');
-    showAllHousesEl.innerText = '+ Все дома';
-
-    allHouses.forEach((house, index) => {
-        renderHouse(house, index);
-    });
+    location.reload();
 };
-
 containerBtnResetEl.addEventListener('click', resetFunction);
 
+const containerModalWindowSelectionHouseEl = document.querySelector('.container-modal-window-selection-house');
+const svgIconCloseModalWindowSelectionHouseEl = document.querySelector('.svg-icon-close-modal-window-selection-house');
+const containerBtnParamsEl = document.querySelector('.container-btn-params');
 
+containerBtnParamsEl.addEventListener('click', () => {
+    containerModalWindowSelectionHouseEl.classList.toggle('hidden-modal-window-selection-house');
+});
+
+svgIconCloseModalWindowSelectionHouseEl.addEventListener('click', () => {
+    containerModalWindowSelectionHouseEl.classList.add('hidden-modal-window-selection-house');e
+});
