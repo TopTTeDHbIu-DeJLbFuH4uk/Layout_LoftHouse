@@ -15,7 +15,7 @@
     border-bottom: 1px solid #b0b0b0;
 
     padding: 80px 40px 50px 150px;
-    margin-right: 146px;
+    margin-right: 145px;
 }
 
 .modal-row-text {
@@ -76,6 +76,7 @@
     position: absolute;
     right: 40px;
     top: 165px;
+    z-index: 1;
 
     width: 450px;
     background-color: #ffffff;
@@ -105,6 +106,7 @@
 
 .price-selection-house {
     font-family: sans-serif;
+    width: fit-content;
 }
 
 .container-select-prices {
@@ -147,6 +149,7 @@
 }
 
 .square-selection-house {
+    width: fit-content;
     padding-top: 25px;
     font-family: sans-serif;
 }
@@ -202,17 +205,14 @@
 
 /* SHOWCASE */
 .container-items {
-    display: flex;
-    flex-wrap: wrap;
-    border-right: 1px solid #b0b0b0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     border-left: 1px solid #b0b0b0;
+    margin-right: 145px;
 }
 
 .item {
-    display: flex;
-    flex-direction: column;
-
-    max-width: 536px;
+    display: grid;
     background-size: cover;
     border-right: 1px solid #b0b0b0;
 }
@@ -220,24 +220,27 @@
 .item-img-wrapper {
     max-width: 100%;
     aspect-ratio: 1.8;
-
+    position: relative;
     cursor: pointer;
 }
 
 .item-img-wrapper > img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
 .item-details {
-    display: flex;
-    flex-direction: column;
     padding: 40px 40px;
     border-bottom: 1px solid #b0b0b0;
 }
 
 .model-house {
+    width: fit-content;
+
     font-size: 36px;
     line-height: 49px;
     letter-spacing: 0.15em;
@@ -264,6 +267,7 @@
 .price-house {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     color: white;
     font-weight: 700;
@@ -354,9 +358,9 @@
 .container-show-all-houses {
     display: flex;
 
-    margin-right: 146px;
-
+    margin-right: 145px;
     padding-top: 40px;
+
     border-left: 1px solid #b0b0b0;
     border-right: 1px solid #b0b0b0;
 }

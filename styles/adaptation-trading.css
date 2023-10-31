@@ -1,0 +1,221 @@
+@media screen and (max-width: 1670px) {
+
+    /* MODAL ROW HEADER */
+    .container-modal-row {
+        padding: 80px 40px 50px 70px
+    }
+
+    .modal-row-text {
+        font-size: 38px;
+    }
+
+    /* SHOWCASE */
+    .model-house {
+        font-size: 28px;
+        line-height: 37px;
+    }
+
+    .price-house {
+        font-size: 26px;
+        line-height: 55px;
+    }
+
+    .size-house {
+        font-size: 26px;
+        line-height: 58px;
+    }
+
+    .btn-more-detailed {
+        width: 130px;
+    }
+
+    .btn-style-more-detailed {
+        font-size: 14px;
+    }
+
+    .btn-presentation {
+        width: 175px;
+    }
+
+    .btn-style-presentation {
+        font-size: 14px;
+    }
+
+    .svg-icon-pdf {
+        width: 25px;
+        height: 40px;
+    }
+
+}
+
+@media screen and (max-width: 1500px) {
+
+    /* MODAL ROW HEADER */
+    .container-modal-row {
+        padding: 80px 30px 30px 60px
+    }
+
+    .modal-row-text {
+        font-size: 28px;
+    }
+
+    /* SHOWCASE */
+    .model-house {
+        font-size: 20px;
+        line-height: 35px;
+    }
+
+    .price-house {
+        font-size: 24px;
+        line-height: 40px;
+    }
+
+    .size-house {
+        font-size: 24px;
+        line-height: 40px;
+    }
+
+    .btn-more-detailed {
+        width: 90px;
+    }
+
+    .btn-style-more-detailed {
+        font-size: 12px;
+    }
+
+    .btn-presentation {
+        width: 140px;
+    }
+
+    .btn-style-presentation {
+        font-size: 12px;
+    }
+
+    .svg-icon-pdf {
+        width: 21px;
+        height: 40px;
+    }
+
+}
+
+@media screen and (max-width: 1315px) {
+
+    /* TRADING */
+    .main-container-trading {
+        padding-left: 0;
+    }
+
+    /* MODAL ROW HEADER */
+    .container-modal-row {
+        margin-right: 0;
+        border-left: none;
+    }
+
+    /* SHOWCASE */
+    .container-items {
+        border-left: none;
+        margin-right: 0;
+    }
+
+    /* SHOW ALL HOUSES */
+    .container-show-all-houses {
+        margin-right: 0;
+        border-left: none;
+        border-right: none;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+
+    /* MODAL ROW HEADER */
+    .container-modal-row {
+        display: block;
+
+        padding: 25px 20px 30px 20px
+    }
+
+    .modal-row-text {
+        font-size: 20px;
+        line-height: 29px;
+        margin-bottom: 20px;
+    }
+
+    .container-btn-params {
+        width: 185px;
+    }
+
+    .btn-params-text {
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .svg-icon-params {
+        width: 13px;
+        height: 15px;
+    }
+
+    /* MODAL WINDOW SELECTION HOUSE */
+    .container-modal-window-selection-house {
+        width: 340px;
+        left: 20px;
+        top: 135px;
+    }
+
+    .price-selection-house {
+        font-size: 14px;
+    }
+
+    .square-selection-house {
+        font-size: 14px;
+    }
+
+    .from-to {
+        font-size: 14px;
+    }
+
+    .input {
+        width: 115px;
+    }
+
+    .filter-invalid-msg {
+        font-size: 12px;
+    }
+
+    /* SHOWCASE */
+    .container-items {
+        grid-template-columns: repeat(1, 100%);
+    }
+
+    .item {
+        border-right: none;
+    }
+
+    .item-img-wrapper {
+        height: 200px;
+        width: 100%;
+    }
+
+    .item-img-wrapper > img {
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .item-details {
+        padding: 25px 20px 30px 20px;
+    }
+
+    .model-house {
+        font-size: 24px;
+        line-height: 33px;
+    }
+
+    .btn-more-detailed {
+        width: 110px;
+    }
+
+    .container-buttons {
+        justify-content: normal;
+        gap: 20px;
+    }
+}

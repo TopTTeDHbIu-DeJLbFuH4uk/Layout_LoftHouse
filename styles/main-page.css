@@ -235,7 +235,7 @@ body {
 
     border-left: 1px gray solid;
     height: 152px;
-    width: 146px;
+    width: 145px;
 }
 
 /* MENU */
@@ -298,7 +298,6 @@ body {
 .header-menu-text {
     display: flex;
     align-items: center;
-    /*width: fit-content;*/
     font-weight: normal;
     font-size: 18px;
     color: white;
@@ -419,13 +418,12 @@ body {
     cursor: pointer;
 }
 
-
 /* CONTENT */
 .container-main-page-header {
     display: flex;
     justify-content: space-between;
 
-    margin-right: 146px;
+    margin-right: 145px;
     padding-left: 145px;
 
     border-top: 1px gray solid;
