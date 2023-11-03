@@ -124,6 +124,13 @@
         border-right: none;
     }
 
+    /* NO RESULTS MESSAGE */
+    .no-results-message {
+        margin-right: 0;
+        border-left: none;
+        border-right: none;
+    }
+
 }
 
 @media screen and (max-width: 1000px) {

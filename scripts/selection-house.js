@@ -220,6 +220,7 @@ containerBtnApplyEl.addEventListener('click', (e) => {
 //    }
 // });
 
+
 const resetFunction = () => {
     location.reload();
 };

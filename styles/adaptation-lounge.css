@@ -1,0 +1,129 @@
+@media screen and (max-width: 1670px) {
+
+    /* CONTENT */
+    .container-content-lounge {
+        margin-right: 70px;
+        padding-left: 70px;
+    }
+
+    .lounge {
+        font-size: 55px;
+        line-height: 73px;
+    }
+
+    .lounge-text {
+        font-size: 26px;
+        line-height: 37px;
+    }
+
+}
+
+@media screen and (max-width: 1500px) {
+
+    /* CONTENT */
+    .container-content-lounge {
+        margin-right: 50px;
+        padding-left: 50px;
+    }
+
+    .lounge {
+        font-size: 46px;
+        line-height: 60px;
+    }
+
+    .lounge-text {
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+}
+
+@media screen and (max-width: 1315px) {
+
+    .background-image-lounge {
+        height: 540px;
+    }
+
+    /* CONTAINER INTERIOR */
+    .main-container-lounge {
+        height: 100%;
+        padding-left: 0;
+        margin-right: 0;
+    }
+
+    /* CONTENT */
+    .container-content-lounge {
+        padding-top: 100px;
+    }
+
+    .lounge {
+        font-size: 40px;
+        line-height: 55px;
+        font-weight: 800;
+        letter-spacing: 0.03em;
+    }
+
+    .lounge-text {
+        margin-bottom: 50px;
+
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .border-bottom-lounge-content {
+        padding-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .container-lounge-btn-more-detailed {
+        max-width: 400px;
+        height: 74px;
+        border: 3px solid #c8b197;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+
+    /* CONTAINER LOUNGE */
+    .main-container-lounge {
+        padding-left: 0;
+        margin-right: 0;
+    }
+
+    .container-lounge {
+        width: 100%;
+        background-color: rgb(0,0,0, 0.7);
+    }
+
+    /* CONTENT */
+    .container-content-lounge {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+        padding-left: 0;
+        margin-right: 0;
+        padding-top: 0;
+    }
+
+    .border-bottom-lounge-content {
+        border-bottom: 2px solid #c8b197;
+        width: 100px;
+    }
+
+    .lounge-text {
+        /*display: flex;*/
+        width: 40%;
+        text-align: center;
+    }
+
+    .container-lounge-btn-more-detailed {
+        display: block;
+        min-width: 300px;
+    }
+
+}

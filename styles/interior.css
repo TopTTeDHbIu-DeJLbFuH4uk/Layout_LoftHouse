@@ -1,0 +1,84 @@
+.background-image-interior {
+    background: url("../images/kitchen-living-room.jpg") center no-repeat;
+    background-size: cover;
+    height: 810px;
+}
+
+/* CONTAINER INTERIOR */
+.main-container-interior {
+    display: flex;
+    height: 100%;
+
+    padding-left: 145px;
+    margin-right: 145px;
+}
+
+.container-interior {
+    width: 50%;
+    background-color: rgb(0,0,0, 0.7);
+}
+
+/* CONTENT */
+.container-content-interior {
+    padding-left: 140px;
+    margin-right: 140px;
+    padding-top: 155px;
+}
+
+.interior {
+    width: fit-content;
+
+    color: #ffffff;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 65px;
+    line-height: 83px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.border-bottom-interior-content {
+    padding-top: 90px;
+    margin-bottom: 60px;
+    width: 150px;
+
+    border-bottom: 3px solid #c8b197;
+}
+
+.interior-text {
+    margin-bottom: 80px;
+
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 30px;
+    line-height: 40px;
+}
+
+.container-interior-btn-more-detailed {
+    max-width: 400px;
+    height: 80px;
+    border: 3px solid #c8b197;
+
+    cursor: pointer;
+}
+
+.interior-btn-more-detailed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 80px;
+    text-transform: uppercase;
+
+    transition: all 0.3s ease;
+}
+
+.container-interior-btn-more-detailed:hover .interior-btn-more-detailed {
+    transition: all 0.3s ease;
+    color: #c8b197;
+}
