@@ -1,0 +1,260 @@
+.main-container-footer {
+    background-color: #252525;
+    padding: 145px 145px 135px;
+}
+
+.container-footer {
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* COLUMN 1 */
+.container-column_1 {
+    display: flex;
+    flex-direction: column;
+    width: 24%;
+    height: fit-content;
+}
+
+.container-footer-logo {
+    display: flex;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    width: 100%;
+    height: 150px;
+    margin-bottom: 40px;
+
+    cursor: pointer;
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.container-contracts {
+    display: flex;
+    width: fit-content;
+
+    cursor: pointer;
+}
+
+.contracts {
+    display: flex;
+    align-items: flex-end;
+
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 27px;
+    font-family: sans-serif;
+    text-decoration: underline;
+
+    padding-left: 20px;
+}
+
+.container-contracts:hover .contracts {
+    text-decoration: none;
+}
+
+.container-requisites {
+    display: flex;
+    width: fit-content;
+    padding-top: 10px;
+
+    cursor: pointer;
+}
+
+.requisites {
+    display: flex;
+    align-items: flex-end;
+
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 27px;
+    font-family: sans-serif;
+    text-decoration: underline;
+
+    padding-left: 20px;
+}
+
+.container-requisites:hover .requisites {
+    text-decoration: none;
+}
+
+/* COLUMN 2 */
+.container-column_2 {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    padding-left: 155px;
+}
+
+.container-column_2 > li {
+    color: #ffffff;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 400;
+    line-height: 29px;
+    text-decoration: none;
+    list-style-type: none;
+
+    margin-bottom: 30px;
+
+    transition: all 0.3s ease;
+
+    cursor: pointer;
+}
+
+.container-column_2 > li:hover {
+    transition: all 0.3s ease;
+    color: #c8b197;
+}
+
+/* COLUMN 3 */
+.container-column_3 {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: fit-content;
+    padding-left: 100px;
+}
+
+.consult-container-mbp {
+    margin: auto 0 45px;
+}
+
+.consult-mbp {
+    color: #ffffff;
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight: 400;
+    line-height: 27px;
+}
+
+.consult-number-phone {
+    color: #ffffff;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 700;
+    line-height: 29px;
+    text-transform: uppercase;
+
+    padding-top: 4px;
+
+    transition: all 0.3s ease;
+
+    cursor: pointer;
+}
+
+.consult-number-phone:hover {
+    transition: 0.3s ease;
+    color: #c8b197;
+}
+
+/* COLUMN 4 */
+.container-column_4 {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    padding-left: 100px;
+    margin-right: 100px;
+}
+
+.info {
+    color: #ffffff;
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight: 400;
+    line-height: 27px;
+}
+
+.email {
+    padding-top: 45px;
+    margin-bottom: 56px;
+
+    color: #ffffff;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 700;
+    line-height: 29px;
+    text-transform: uppercase;
+
+    transition: 0.3s ease;
+
+    cursor: pointer;
+}
+
+.email:hover {
+    transition: 0.3s ease;
+    color: #c8b197;
+}
+
+.container-btn-write {
+    border: 3px solid #c8b197;
+    width: 300px;
+    height: 74px;
+
+    cursor: pointer;
+}
+
+.btn-write {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    color: #ffffff;
+    font-size: 23px;
+    font-family: sans-serif;
+    font-weight: 700;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+
+.container-btn-write:hover .btn-write {
+    color: #c8b197;
+}
+
+/* FOOTER BOTTOM */
+.container-footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #252525;
+
+    padding-top: 45px;
+    padding-bottom: 45px;
+
+    border-top: 1px solid #b0b0b0;
+}
+
+.left {
+    display: flex;
+    padding-left: 145px;
+
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: sans-serif;
+    line-height: 27px;
+}
+
+.right {
+    display: flex;
+    margin-right: 145px;
+    gap: 30px;
+}
+
+.instagram {
+    cursor: pointer;
+}
+
+.you-tube {
+    cursor: pointer;
+}

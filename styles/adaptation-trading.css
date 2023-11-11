@@ -226,3 +226,13 @@
         gap: 20px;
     }
 }
+
+@media screen and (max-width: 441px) {
+
+    /* MODAL WINDOW SELECTION HOUSE */
+    .container-modal-window-selection-house {
+        left: 20px;
+        top: 160px;
+    }
+
+}

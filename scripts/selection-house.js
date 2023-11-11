@@ -212,15 +212,6 @@ containerBtnApplyEl.addEventListener('click', (e) => {
     applyElClickHandler(e);
 });
 
-// containerBtnApplyEl.addEventListener('keypress', (e) => {
-//    if (e.keyCode === 13) {
-//        document.querySelector('.container-btn-apply').click();
-//        containerBtnResetEl.classList.remove('hidden-btn-reset');
-//        applyElClickHandler(e);
-//    }
-// });
-
-
 const resetFunction = () => {
     location.reload();
 };

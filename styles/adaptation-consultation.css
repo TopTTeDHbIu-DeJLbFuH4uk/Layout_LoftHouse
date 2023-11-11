@@ -1,0 +1,64 @@
+@media screen and (max-width: 1670px) {
+
+    /* CONTENT */
+    .get-consult {
+        font-size: 34px;
+    }
+
+}
+
+@media screen and (max-width: 1315px) {
+
+    .background-consultation {
+        background: #6a6a6a none;
+        height: auto;
+    }
+
+    /* CONTAINER CONSULTATION */
+    .container-consultation {
+        display: flex;
+        justify-content: center;
+        padding-top: 0;
+        padding-left: 50px;
+        margin-right: 50px;
+    }
+
+    .get-consult-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        border: none;
+        background: none;
+        padding: 0;
+    }
+
+    /* CONTENT */
+    .get-consult {
+        text-align: center;
+
+        color: #ffffff;
+        font-size: 30px;
+        line-height: 33px;
+
+        margin-bottom: 50px;
+    }
+
+    .container-btn-send {
+        height: 74px;
+    }
+
+    .btn-send {
+        font-size: 18px;
+        line-height: 64px;
+    }
+
+    .form-notice {
+        margin-bottom: 85px;
+    }
+
+    .form-notice > br {
+        display: none;
+    }
+
+}
